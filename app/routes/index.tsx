@@ -1,4 +1,4 @@
-// app/routes/index.tsx
+import { Button } from "@/components/Button";
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/")({
@@ -6,5 +6,5 @@ export const Route = createFileRoute("/")({
 });
 
 function Home() {
-  return <button>hi</button>;
+  return <Button>hi</Button>;
 }

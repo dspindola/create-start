@@ -1,5 +1,6 @@
 import { defineConfig } from "@tanstack/start/config";
 import tsConfigPaths from "vite-tsconfig-paths";
+import tailwindVite from "@tailwindcss/vite";
 
 export default defineConfig({
   routers: {
@@ -14,8 +15,11 @@ export default defineConfig({
     },
   },
   vite: {
+    // @ts-expect-error
     plugins: () => [
+      tailwindVite(),
       tsConfigPaths({
+        root: ".",
         projects: ["./tsconfig.json"],
       }),
     ],
